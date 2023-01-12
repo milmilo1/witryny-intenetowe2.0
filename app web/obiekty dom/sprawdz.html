@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function name()
+        {
+            document.write("Nazywama się Miłosz Michta");
+        }
+        function czyprzeztrzy(x)
+        {
+            if (x%3==0)            
+                document.write("liczba podzielna przez 3");                 
+            else
+                document.write("nie podzielna przez 3")
+        }
+        czyprzeztrzy(2);
+        function mniejsza (a ,b )
+        {
+            if (a >b )
+             document.write("liczba"+b +"mniejsza ");
+            else if(b>a)
+                document.write("liczba "+a+"większa");
+
+        }
+ 
+        function ShowTime()
+        {
+           let date = new Date();
+           let hour =napraw(date.getHours());
+           let minute = napraw(date.getMinutes());
+           let sec = napraw(date.getSeconds())
+            
+            let time= hour + ":"+minute + ":" + sec;
+            document.write(time)
+    
+        }
+        function napraw(z)
+        {
+            if (z <10 )
+                return"0" +z;
+            return z;
+        }
+        
+
+document.write("<br>")
+ShowTime();
+      
+        function coDruga()
+        {
+            for( i=5; i==100; i++)
+            {
+                if(i%2 == 1 )
+                {
+                     document.write(i+",");
+                }
+            }
+        }
+        coDruga();
+    </script>
+
+
+   
+</body>
+</html>

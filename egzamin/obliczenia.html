@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Stacja paliw</title>
+</head>
+<body >
+<div id="top"><p> Całodobowa stacja paliw</p> </div>
+<div id="menu"><img src="home.png"><img src="znak.png"> <br>
+   
+    <div id="blokLewy">   <h2>Orientacyjny koszt paliwa</h2> 
+        <p>„Rodzaj paliwa (1-benzyna, 2-olej napędowy): </p>
+        <form> 
+          <input type="number" id="rodzaj" >
+          <p>Ile litrów?</p>
+          <input type="number" id="IlePaliwa" ><br>
+          <input  type="button" value="Oblicz"  onclick="zadanie();" >
+          <p id="wynik"></p>
+        </form>
+        <script>
+            function zadanie()
+            {
+                rodzaj = document.getElementById("rodzaj").value;
+                IlePaliwa = document.getElementById("IlePaliwa").value
+                if(rodzaj==1)
+                {
+                    document.getElementById("wynik").innerHTML= "koszt paliwa:"+ IlePaliwa*4  +" zł";
+                }
+                else if(rodzaj==2)
+                {
+                    document.getElementById("wynik").innerHTML= "koszt paliwa:"+IlePaliwa*3.5  +" zł";
+                }
+                else 
+                document.getElementById("wynik").innerHTML= "koszt paliwa:0zł";     
+            }
+
+        </script>
+    </div>
+    <div id="blokprawy"><img src="samochod.png" id="obraz"> </div>
+</div>
+<div id="footer">Strone opracował  Miłosz Michta</div>
+</body>
+</html>

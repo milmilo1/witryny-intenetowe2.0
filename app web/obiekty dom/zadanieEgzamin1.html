@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>egzami</title>
+    <style>
+       
+        input {
+            color: rgb(146, 56, 230);
+        }
+ 
+    </style>
+</head>
+<body>
+    <form >
+    <p id="problem"></p>
+    <p>Podaj imię:</p>
+
+    <input type="text" id="imie" maxlength="10" /><br/>
+    <p id="pole1" style="color: red" > </p>
+
+    <p>Podaj wiek</p>
+    <input type="text" id="wiek"  maxlength="10" /><br/>
+    <p id="pole2" style="color: red" > </p>
+
+    <br>
+    </form>
+    <input  type="button" value="Działaj"  onclick="zadanie()"/>
+    <br>
+
+    <p id="pole3" style="color: green   "> </p>
+    <br>
+        <p id="pole4" style="color: green" > </p>
+
+
+ <script>
+
+         name = document.getElementById("imie").value;
+         age = document.getElementById("wiek").value;
+         
+        function zadanie()
+    {
+       
+        
+        
+         name = document.getElementById("imie").value;
+         age = document.getElementById("wiek").value;
+  
+         
+        if (name=="")
+        {
+            
+            document.getElementById("pole1").innerHTML="Uzupełnij pole imie" ;    
+                    
+        }    
+        else
+        {
+            document.getElementById("pole3").innerHTML="Witaj " + name +" na stronie ";
+            document.getElementById("pole1").innerHTML="" ;  
+        }
+        console.log("działa")
+
+
+
+ 
+
+         if(age=="")
+         {
+            document.getElementById("pole2").innerHTML="Uzupełnij pole wiek";
+            document.getElementById("pole3").innerHTML="";
+            document.getElementById("pole4").innerHTML=""; 
+         }
+        else  if(age<1 || age> 122 )
+        {
+            document.getElementById("pole2").innerHTML="liczba jest z poza zakresu " ;
+            document.getElementById("pole3").innerHTML="";  
+            document.getElementById("pole4").innerHTML="";   
+        }
+        else if (age>=18)
+        {
+            document.getElementById("pole4").innerHTML="Jesteś pełnoletni";
+            document.getElementById("pole2").innerHTML="";
+        if (name=="")
+            {
+            document.getElementById("pole4").innerHTML="" ;            
+            } 
+        }
+        else if (age<18)
+        {          
+            document.getElementById("pole4").innerHTML="Jesteś nie pełnoletni ";
+            document.getElementById("pole2").innerHTML="";
+            if (name=="")
+                {
+                     document.getElementById("pole4").innerHTML="" ;            
+                } 
+        }
+        
+        if(isNaN(parseInt(age)))
+            {
+                document.getElementById("pole2").innerText = "Wiek powinien byc  liczb"
+                document.getElementById("pole3").innerHTML="";
+                document.getElementById("pole4").innerHTML="";
+                if (name=="")
+                {
+                     document.getElementById("pole4").innerHTML="" ;            
+                } 
+            }
+    }
+
+
+
+ </script>
+</body>
+</html>
