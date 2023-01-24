@@ -1,37 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" onpointermove="przemiesc()">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body   >
+<html onmousemove="increaseCounter()">
+    <head>
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <div id="counterId"></div>
+        <script>
+            let counter = 0;
+            function increaseCounter()
+            {
+                document.getElementById("counterId").innerText = counter++;
+            }
 
-  <img src="OBRAZEK-1.PNG" width="500px" onmouseover="this.src = 'obraz.png'" onmouseout="this.src = 'obraz2.png'">
-  <img src="obraz.png" width="200px" height="200px" id="imageId"
-   onmouseenter= "changeImage('obraz.png', imageId)"
-   onmouseleave="changeImage('obraz2.png', imageId)" />
+            function ChangeText()
+            {
+                let elementNewText = document.getElementById("newText");
 
-  <script>
+                let elementToChange = document.getElementById("textToChange");
+                //elementToChange.innerHTML = "Ala ma kota";
+                elementToChange.innerHTML = elementNewText.value;
+            }
 
-    function changeImage(zdjecie,elementID)
-  {
-    let imgObject= document.getElementById(elementID);
-    imgObject.scr= zdjecie
-  }
-  
-</script>
-<br>
-<b> jak myszka sie rushy </b>
-<p id="licznik"> </p>
-<script> 
-i =0;
-function przemiesc()
-{
-  i++;
-  document.getElementById("licznik").innerHTML=i;
-}
-</script>
-</body>
+            function ShowTime()
+            {
+                let date = new Date();
+                let hour = Fix(date.getHours());
+                let minute = Fix(date.getMinutes());
+                let second = Fix(date.getSeconds());
+
+                let time = hour + ":" + minute + ":" + second;
+
+                document.getElementById("showTime").innerHTML = time;
+            }
+
+            function Fix(elementToFix)
+            {
+                if (elementToFix < 10)
+                    return "0" + elementToFix;
+                return elementToFix;
+            }
+
+            //window.setInterval(ShowTime, 1000);
+
+        </script>
+
+        <div>Podaj tekst do zmiany:</div>
+        <input type="text" id="newText" value="Przykładowy tekst"/><br/>
+        <input type="button" value="Wyświetl" onclick="ChangeText()"/>
+
+        <div id="textToChange">Podmień ten tekst</div>
+
+        <input type="button" value="Pokaż godzinę" onclick="ShowTime()"/>
+        <div id="showTime"/>
+       
+        <img src="zd1.jpg" width="100" height="100"
+            onmouseenter="this.src = 'zd2.jpg'"
+            onmouseleave="this.src = 'zd1.jpg'"/>
+
+        <img src="zd1.jpg" width="100" height="100" id="imageId"
+            onmouseenter="changeImage('zd2.jpg')"
+            onmouseleave="changeImage('zd1.jpg')"/>
+
+        <img src="zd1.jpg" width="100" height="100" id="image2Id"
+            onmouseenter="changeImage2('zd2.jpg', 'image2Id')"
+            onmouseleave="changeImage2('zd1.jpg', 'image2Id')"/>
+
+        <img src="zd1.jpg" width="100" height="100" id="image3Id"
+            onmouseenter="changeImage2('zd2.jpg', 'image3Id')"
+            onmouseleave="changeImage2('zd1.jpg', 'image3Id')"/>
+
+        <img src="zd1.jpg" width="100" height="100"
+            onmouseenter="changeImage3('zd2.jpg', this)"
+            onmouseleave="changeImage3('zd1.jpg', this)"/>
+
+        <script>
+
+            //nazwa zdjęcia
+            function changeImage(imageName)
+            {
+                let imgObject = document.getElementById("imageId");
+                imgObject.src = imageName;
+            }
+            //nazwa zdjęcia i id elementu
+            function changeImage2(imageName, elementId)
+            {
+                let imgObject = document.getElementById(elementId);
+                imgObject.src = imageName;
+            }
+            //nazwa zdjęcia oraz wskaźnik na element
+            function changeImage3(imageName, pointer)
+            {
+                pointer.src = imageName;
+            }
+
+
+        </script>
+
+    </body>
 </html>
