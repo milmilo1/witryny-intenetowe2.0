@@ -1,0 +1,39 @@
+body{
+    font-family: Helvetica;
+    background-color:rgb(146, 184, 112);
+}
+#goraLewy , #goraPrawy{
+    float:left;
+    width: 50%;
+    background-color:rgb(146, 184, 112);
+    
+    text-align: center;
+    height: 170px;
+}   
+img{
+    height:   150px;
+}
+
+#baner , #stop
+ {
+    display: grid;
+    background-color:rgb(100, 61, 49);
+    text-align: center;
+    color: white;
+    height: 80px;
+    padding: 5px;
+
+}
+#mainLewy , #mainPrawy
+{
+    background-color:rgb(146, 184, 112);   
+    width: 50%; 
+    height: 450px;
+   
+}
+tr,td, table{
+    
+    border: 2px dotted green; 
+    margin: 30px;
+    padding: 20px;
+}

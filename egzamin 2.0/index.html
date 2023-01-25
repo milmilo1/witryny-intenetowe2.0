@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css">
+</head>
+<body>
+    <div id="goraLewy">
+        <img src="cukierki1.png" href="zamowienie.html"    >
+    </div>
+    <div id="goraPrawy">
+        <img src="cukierki2.png" href="zamowienie.html"    >
+    </div>
+
+
+     
+
+    <div id="baner">
+        <h1>Strefa zamówień</h1>
+
+    </div>
+
+
+
+    <div id="mainLewy">
+        <form>
+            <p>numer kształtu:</p>
+            <input type="number" id="numerKształtu">
+            <p>skonpoonuj swoj kolor podaj RGB</p>
+            R: <input type="number" max="144"  min="0">  G: <input type="number" max="144"  min="0">   B: <input type="number" max="144"  min="0">
+            <br>
+            <input type="button" value="zamówienie" onclick="x()">
+            <p id="pole1"></p>
+        </form>
+        
+    </div>
+    <div id="mainPrawy">
+        Nasza Oferta
+        <table id="tabela" BORDER WIDTH=400 style="">
+            <tr>
+               <td>Krztałt</td>  <td  rowspan="3">Możesz zamówić dowolny kolor cukierka</td>
+            </tr>
+            <tr>
+               <td rowspan="2"> 1. Cytryna <br>
+            2.Liść<br>
+            3.banan<br> </td>         
+            </tr>
+            
+         </table>
+    </div>
+
+
+    <div id="stop">
+        Miłosz Michta
+
+    </div>
+
+    <script>
+            x()
+            {
+                ile = document.getElementById("numerKształtu").value;
+                if(ile==1){
+                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
+                }
+                else if(ile==2){
+                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
+                }
+                else if(ile==3)
+                {
+                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
+                }
+                else
+                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek inny"
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    font-family:  Helvetica;
+    background-color: rgb(70, 130, 180);
+}
+#baner , #stopka
+{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+#głowny{
+    background-color: rgb(176, 196, 222); 
+    padding: 50px;
+    text-align: center; 
+}
+#lewy{
+    float:left;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 80%;
+}
+#prawy{
+    float:left;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 20%;
+}
+#lewy img
+{
+    height: 40%;
+    
+}
+#lewy img:hover {
+    border-radius: 1px white;
+    border-color: white;
+    border-style:dashed ;
+}
+#stopka{
+    clear:both;
+}
+#wynik{
+    border-style:dotted ;
+    border-color: blue;
+}
