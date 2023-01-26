@@ -1,0 +1,53 @@
+body{
+    font-family: Garamod;
+    background-color: lavender;
+}
+#lewyJeden{
+    float:left;
+    height: 500px;
+    width: 25%;
+    background-color: lavender;
+}
+#lewyDwa{
+    float:left;
+    height: 300px;
+    width: 25%;
+    background-color: lavender;
+    float: none ;
+    
+}
+
+#PrawyJeden{
+    float:left;
+    height: 150px;
+    width: 75%;
+     background-color: indigo;
+     text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+#PrawyDwa{
+    float:left;
+    height: 650px;
+    width: 75%;
+    background-color: lavender;
+    font-size: 200%;
+    text-align: center;
+}
+#stopka{
+    background-color: indigo;
+    color: white;
+    text-align: right;
+    clear: both;
+}
+#obraz{
+    padding: 5px;
+    margin: 10px;
+}
+#obraz:hover{
+    
+    padding: 4px;
+    border-style: solid;
+    border-color: indigo;
+}
