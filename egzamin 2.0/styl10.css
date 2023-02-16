@@ -26,6 +26,7 @@ img{
 }
 #mainLewy , #mainPrawy
 {
+    float:left;
     background-color:rgb(146, 184, 112);   
     width: 50%; 
     height: 450px;
