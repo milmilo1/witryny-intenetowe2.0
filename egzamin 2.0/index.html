@@ -9,32 +9,26 @@
 </head>
 <body>
     <div id="goraLewy">
-        <img src="cukierki1.jpg" href="zamowienie.html"    >
+        <a href="zamowienie.html">Zamów cukierk</a>
+        <img src="cukierki1.jpg"   >
     </div>
     <div id="goraPrawy">
-        <img src="cukierki2.png" href="zamowienie.html"    >
+        <img src="cukierki2.png" href="index.html"   alt="Nasze cukierki" >
     </div>
 
 
      
 
     <div id="baner">
-        <h1>Strefa zamówień</h1>
+        <h1>Słodka kraina</h1>
 
     </div>
 
 
 
     <div id="mainLewy">
-        <form>
-            <p>numer kształtu:</p>
-            <input type="number" id="numerKształtu">
-            <p>skonpoonuj swoj kolor podaj RGB</p>
-            R: <input type="number" max="144"  min="0">  G: <input type="number" max="144"  min="0">   B: <input type="number" max="144"  min="0">
-            <br>
-            <input type="button" value="zamówienie" onclick="x()">
-            <p id="pole1"></p>
-        </form>
+            <img src="cukierki3.jpg" href="index.html"   alt="Nasze logo" > 
+       
         
     </div>
     <div id="mainPrawy">
@@ -58,23 +52,5 @@
 
     </div>
 
-    <script>
-            x()
-            {
-                ile = document.getElementById("numerKształtu").value;
-                if(ile==1){
-                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
-                }
-                else if(ile==2){
-                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
-                }
-                else if(ile==3)
-                {
-                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek cytryna"
-                }
-                else
-                    document.getElementById("pole1").innerHTML="Twoje zamówienie to cukierek inny"
-            }
-    </script>
 </body>
 </html>
