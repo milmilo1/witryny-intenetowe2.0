@@ -1,5 +1,9 @@
-body{
+*{
     font-family:  Helvetica;
+}
+
+body{
+    
     background-color: rgb(70, 130, 180);
 }
 #baner , #stopka
