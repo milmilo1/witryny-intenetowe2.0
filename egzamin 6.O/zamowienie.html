@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <div id="baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+    <div id="lewy">
+      <h2>Aktualizacja i zamówienia materiałów</h2>  <br>
+      <p>Do wewnętrznego użytku firmy</p>
+      <img src="obraz.png" alt="„Do wewnętrznego użytku firmy">
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <td><b>Produk</b> </td> 
+                <td><b>Jednostka</b> </td> 
+                <td><b>Dostępna ilość</b> </td>  
+                <td><b>Aktualizacja</b> </td>  
+                <td><b>Zamówienie</b> </td>   
+            </tr>
+            <tr>
+                <td><b>Skrętka U/UTP drut</b> </td> 
+                <td>metr</td> 
+                <td><p id="pole1">  </p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+            </tr>
+            <tr>
+                <td><b>Skrętka U/UTP linka</b> </td> 
+                <td>metr</td> 
+                <td><p id="pole2">  </p> </td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+            </tr>
+            <tr>
+                <td><b>Wtyki 8P8C</b> </td> 
+                <td>sztuki</td> 
+                <td><p id="pole3">  </p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+            </tr>
+            <tr>
+                <td><b>Moduły Keystone</b> </td> 
+                <td>sztuki</td> 
+                <td> <p id="pole4">  </p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+            </tr>
+            
+        </table>
+    </div>
+   
+    <div id="stopka">
+        <a href="http://sieci.pl/">Nasza strona internetowa</a><br>
+        <p>Strone przygotował:674579646548</p>
+    </div>
+    <script >
+    wartosc1=30;
+    wartosc2=2 ;
+    wartosc3=10;
+    wartosc4=30;
+          document.getElementById("pole1").innerHTML=wartosc1;
+          document.getElementById("pole2").innerHTML=wartosc2;
+          document.getElementById("pole3").innerHTML=wartosc3;
+          document.getElementById("pole4").innerHTML=wartosc4;
+    function braki(wartosc){
+        if(wartosc<5)
+        {
+
+        }
+    }
+    </script>
+</body>
+</html>

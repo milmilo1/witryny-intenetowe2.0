@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "SynthWave '84",
+    "workbench.preferredDarkColorTheme": "Atom One Dark",
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "css.lint.argumentsInColorFunction": "error"
+}
