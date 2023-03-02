@@ -29,28 +29,28 @@
                 <td><b>Skrętka U/UTP drut</b> </td> 
                 <td>metr</td> 
                 <td><p id="pole1">  </p></td>  
-                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc1,pole1)"></td>  
                 <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
             </tr>
             <tr>
                 <td><b>Skrętka U/UTP linka</b> </td> 
                 <td>metr</td> 
                 <td><p id="pole2">  </p> </td>  
-                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc2,pole2)"></td>  
                 <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
             </tr>
             <tr>
                 <td><b>Wtyki 8P8C</b> </td> 
                 <td>sztuki</td> 
                 <td><p id="pole3">  </p></td>  
-                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc3,pole3)"></td>  
                 <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
             </tr>
             <tr>
                 <td><b>Moduły Keystone</b> </td> 
                 <td>sztuki</td> 
                 <td> <p id="pole4">  </p></td>  
-                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja()"></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc4,pole4)"></td>  
                 <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
             </tr>
             
@@ -70,11 +70,15 @@
           document.getElementById("pole2").innerHTML=wartosc2;
           document.getElementById("pole3").innerHTML=wartosc3;
           document.getElementById("pole4").innerHTML=wartosc4;
-    function braki(wartosc){
-        if(wartosc<5)
+    function aktualizacja(wartosc,pole){
+        if(wartosc<5 && wartosc>0)
         {
-
+            document.getElementById(pole).style.backgroundColor = "yellow";
         }
+        else if(wartosc==0){
+            document.getElementById(pole).style.backgroundColor = "red";
+        }
+
     }
     </script>
 </body>

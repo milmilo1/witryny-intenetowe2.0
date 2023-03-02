@@ -13,7 +13,7 @@ body{
     height: 30px;
     text-align: center;
 }
-#głowny{
+#glowny{
     background-color: rgb(176, 196, 222); 
     padding: 50px;
     text-align: center; 
@@ -40,7 +40,7 @@ body{
 #lewy img:hover {
     border-radius: 1px white;
     border-color: white;
-    border-style:dashed ;
+    border-style:solid  ;
 }
 #stopka{
     clear:both;
@@ -48,4 +48,5 @@ body{
 #wynik{
     border-style:dotted ;
     border-color: blue;
+    border-radius: 10px;
 }
