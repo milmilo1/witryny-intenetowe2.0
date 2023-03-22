@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="jeden" onclick="funkcja('jeden')"></td>             <td id="dwa" onclick="funkcja('dwa')"></td>              <td id="trzy" onclick="funkcja('trzy')"></td> 
+         </tr>
+         <tr>
+            <td id="cztery" onclick="funkcja('cztery')"></td>           <td id="pienc" onclick="funkcja('pienc')"></td>                    <td id="szesc" onclick="funkcja('szesc')"></td>
+         </tr>
+         <tr>
+            <td id="siedem" onclick="funkcja('siedem')"></td>        <td id="osiem" onclick="funkcja('osiem')"></td>                 <td id="dziewienc" onclick="funkcja('dziewienc')"></td>
+         </tr>
+    </table>
+    <script>
+        let OX=0
+        function funkcja(liczba)
+        {
+           
+            console.log(        )
+            if(document.getElementById(liczba).innerHTML.length==0)
+            {
+                if(OX%2==0){
+                    document.getElementById(liczba).innerHTML="X"
+                }
+                else
+                {
+                    document.getElementById(liczba).innerHTML="O"
+                    
+                }
+
+
+                OX++
+            }
+
+        }
+    </script>
+</body>
+</html>
