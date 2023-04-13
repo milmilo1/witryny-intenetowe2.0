@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochamy kawę</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <a href="index.html">Strona główna</a>
+        <a href="zamowienia.html">Zamównienie</a>
+        <a href="blog.html">blog</a>
+        <a href="https://gatunki-kawy.pl/" target="_blank">gatunki-kawy</a>        
+    </div>
+    <div id="logo">
+        <img src="logo.png" alt="Kawa">
+    </div>
+    <div id="baner">
+        <h1>Sklep z kawą</h1>
+    </div>
+    <div id="lewy">
+        <form>
+            <p>Podaj numer kawy
+        <input id="x" type="number" min="0"></p>
+        <p>Podaj wagę w dekagramach
+            <input id="y"   type="number" min="0"></p>
+            <input type="button" value="Zamów" onclick="fukncja()">
+        </form>
+        <p id="cena"></p>
+    </div>
+    <div id="prawy">
+        <h3>Oferta </h3>
+        <ul>
+            <li>Arabica</li>
+            <li>Robusta</li>
+            <li ><p id="numer3">bezkofeinowa</p></li>
+            <li>zielona</li>
+        </ul>
+    </div>
+    <div id="stopka">
+        <p>Strone przygotował:<b>420692137</b> </p>
+    </div>
+    <script>
+        function fukncja(){
+            x=document.getElementById("x").value;
+            y=document.getElementById("y").value;
+            if(x==1  )
+            {
+                cena=x*5
+            }
+            else if(x==2)
+            {
+                cena=x*7
+            }
+            else if(x==4)
+            {
+                cena=x*6
+            }
+            else
+            {
+                cena=0
+            }
+            document.getElementById("cena").innerHTML= cena;
+        }
+    </script>
+</body>
+</html>

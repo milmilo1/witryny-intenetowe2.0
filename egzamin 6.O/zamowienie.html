@@ -70,15 +70,52 @@
           document.getElementById("pole2").innerHTML=wartosc2;
           document.getElementById("pole3").innerHTML=wartosc3;
           document.getElementById("pole4").innerHTML=wartosc4;
-    function aktualizacja(wartosc,pole){
-        if(wartosc<5 && wartosc>0)
+   braki();
+
+
+    function braki(){
+        
+        
+        if(wartosc1<5 && wartosc1>0)
         {
-            document.getElementById(pole).style.backgroundColor = "yellow";
+            document.getElementById("pole1").style.backgroundColor = "yellow";
         }
-        else if(wartosc==0){
-            document.getElementById(pole).style.backgroundColor = "red";
+        else if(wartosc2==0){
+            document.getElementById("pole1").style.backgroundColor = "red";
         }
 
+        if(wartosc2<5 && wartosc2>0)
+        {
+            document.getElementById("pole2").style.backgroundColor = "yellow";
+        }
+        else if(wartosc2==0){
+            document.getElementById("pole2").style.backgroundColor = "red";
+        }
+        if(wartosc3<5 && wartosc3>0)
+        {
+            document.getElementById("pole3").style.backgroundColor = "yellow";
+        }
+        else if(wartosc3==0){
+            document.getElementById("pole3").style.backgroundColor = "red";
+        }
+        if(wartosc4<5 && wartosc4>0)
+        {
+            document.getElementById("pole4").style.backgroundColor = "yellow";
+        }
+        else if(wartosc1==0){
+            document.getElementById("pole4").style.backgroundColor = "red";
+        }
+    }
+    
+    
+
+    function aktualizacja(wartosc,pole){
+        wartosc = prompt("Podaj nową ilość:")  
+        document.getElementById(pole).innerHTML=wartosc;
+        braki();
+    }
+    function zamamow(){
+        
     }
     </script>
 </body>
