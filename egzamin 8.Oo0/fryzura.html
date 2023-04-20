@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="lewy-1">
+        <a href="index.html"> <h1>SALON FRYZJERSKI</h1></a>
+    <img src="obraz2.jpg" alt="Czesanie">
+    </div>
+    <div id="prawy-1">
+        <h2>Menu </h2>
+
+    </div>
+    <div id="prawy-2">
+        <ol>
+            <li><a href="fryzura.html">  Strzyżenie</a>
+                <ul>
+                    <li>krótkie</li>
+                    <li>średnie</li>
+                    <li>półdługie</li>
+                    <li>długie</li>
+                  </ul>
+            </li>
+               <li>Czesanie</li>
+               <li>Koloryzacja</li>
+            </ol>
+    </div>
+
+    <div id="lewy-2">
+        <h3>Kontakt: 111 222 333</h3>
+        <form>
+           
+            <input type="radio" id="krotkie" name="dupa">
+            <label for="krotkie">krótkie</label><br>
+            <input type="radio" id="srednie" name="dupa">
+            <label for="srednie">średnie</label><br>
+            <input type="radio" id="puldlugie" name="dupa">
+            <label for="puldlugie">półdługie</label><br>
+            <input type="radio" id="dlugie" name="dupa">  
+            <label for="dlugie">długie</label><br>
+           
+        </form>
+        <input type="button" value="„Odkryj promocję”" onclick="funkcja()">
+        <p id="odp"> </p>
+       </div>
+    
+    <div id="prawy-3">
+        <img src="obraz1.jpg" alt="Fryzjer">
+
+    </div>
+    <br>
+    <div style=" clear: both;"></div>
+    <div id="stopka">
+        <p>Autor</p>
+    </div>
+    <script>
+        function funkcja(){
+            if(document.getElementById("krotkie").checked)
+            {
+                x=25;
+            }
+            else if(document.getElementById("srednie").checked)
+            {
+                x=30;
+            }
+            else if(document.getElementById("puldlugie").checked)
+            {
+                x= 40;
+            }
+            else if(document.getElementById("dlugie").checked)
+            {
+                x= 50;
+            }
+            else{
+                x=0;
+            }
+            document.getElementById("odp").innerHTML="Cena strzyzenia "+x;
+
+        }
+    </script>
+</body>
+</html>

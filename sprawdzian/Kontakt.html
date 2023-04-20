@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi informatyczne</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png">
+
+</head>
+<body>
+    <div class="container">
+            <div id="logo">
+                <img src="logo.png" alt="logo firmy">
+            </div>
+            <div id="menu">
+                <a href="index.html" >O nas </a><a href="usługi.html" >usługi </a><a href="Kontakt.html" >Kontakt </a>
+            </div>
+        
+        <div id="baner">
+            <img src="baner1.png">
+            
+        </div>
+        <div id="mein">
+            <hr>
+                <h2>”Kontakt”</h2>
+                <form>
+                    <p>Imię: <input type="text" id="imie"></p>
+                    <p>Nazwisko: <input type="text" id="nazwisko"></p>
+                    <p>email: <input type="email" id="email"></p>
+                    <p>Usługa:  <textarea  id="usluga"> </textarea></p>
+                    <input type="checkbox" id="regulamin"> <label for="regulamin">Zapoznałam/em się z regulaminem</label>
+                    <input type="reset">  <input type="button" value="przeslij" onclick="funkcja();"> 
+
+                </form>
+                <p id="wynik"></p>
+                <p id="wynik2"></p>
+                <p id="wynik3"></p>
+            <hr>
+        </div>
+        <div id="stopka">
+            <p>Autor<b>123456789</b></p>
+        </div>
+        <script>
+            function funkcja(){
+                if(document.getElementById("regulamin").checked)
+                {
+                    imie=document.getElementById("imie").value;
+                    nazwisko=document.getElementById("nazwisko").value;
+                    usluga=document.getElementById("usluga").value;
+                    document.getElementById("wynik").style.color="black";
+                    document.getElementById("wynik").innerHTML=imie.toUpperCase() +'&nbsp;'+ nazwisko.toUpperCase();
+                    document.getElementById("wynik2").innerHTML="Treść Twojej sprawy"+usluga;
+                    document.getElementById("wynik3").innerHTML="Na podany e-mail zostanie wysłana oferta.";
+                }
+                else{
+                    document.getElementById("wynik").style.color="red";
+                    document.getElementById("wynik").innerHTML="Musisz zapoznać się z regulaminem";
+                    document.getElementById("wynik2").innerHTML="";
+                    document.getElementById("wynik3").innerHTML="";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
