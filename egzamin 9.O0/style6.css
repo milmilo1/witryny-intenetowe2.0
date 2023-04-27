@@ -1,21 +1,48 @@
 body{
     font-family: Georgia;
-    display: flex;
+    margin: 0;
+    padding: 0;
 }
 #lewy{
+    float: left;
     background-color: maroon;
     color: white;
     height: 600px;
     width: 30%;
-}
+} 
 #prawy{
+    float: left;
     background-color: maroon;
-    background: maroon;
     color: white;
     height: 600px;
     width: 70%;
     overflow: auto;
 }
+
 #stopka{
     clear: both;
+    background-color: dimgray;
+}
+ img , ul
+{
+    float: left;
+}
+#lorem{
+    clear: both;
+}
+p{
+    padding: 10px;
+}
+img{
+    padding: 10px;
+    border: 1px solid white;
+}
+#Indigo{
+    background-color: Indigo;
+}
+#SteelBlue{
+    background-color: SteelBlue;
+}
+#Olive{
+    background-color: Olive ;
 }
