@@ -30,28 +30,28 @@
                 <td>metr</td> 
                 <td><p id="pole1">  </p></td>  
                 <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc1,pole1)"></td>  
-                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+                <td> <input type="button" value="Zamów" onclick="zamamow(wartosc1,pole1)"></td>   
             </tr>
             <tr>
                 <td><b>Skrętka U/UTP linka</b> </td> 
                 <td>metr</td> 
                 <td><p id="pole2">  </p> </td>  
                 <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc2,pole2)"></td>  
-                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+                <td> <input type="button" value="Zamów" onclick="zamamow(wartosc2,pole2)"></td>   
             </tr>
             <tr>
                 <td><b>Wtyki 8P8C</b> </td> 
                 <td>sztuki</td> 
                 <td><p id="pole3">  </p></td>  
                 <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc3,pole3)"></td>  
-                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+                <td> <input type="button" value="Zamów" onclick="zamamow(wartosc3,pole3)"></td>   
             </tr>
             <tr>
                 <td><b>Moduły Keystone</b> </td> 
                 <td>sztuki</td> 
                 <td> <p id="pole4">  </p></td>  
                 <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(wartosc4,pole4)"></td>  
-                <td> <input type="button" value="Zamów" onclick="zamamow()"></td>   
+                <td> <input type="button" value="Zamów" onclick="zamamow(wartosc4,pole4)"></td>   
             </tr>
             
         </table>
@@ -80,7 +80,7 @@
         {
             document.getElementById("pole1").style.backgroundColor = "yellow";
         }
-        else if(wartosc2==0){
+        else if(wartosc1==0){
             document.getElementById("pole1").style.backgroundColor = "red";
         }
 
@@ -102,20 +102,52 @@
         {
             document.getElementById("pole4").style.backgroundColor = "yellow";
         }
-        else if(wartosc1==0){
+        else if(wartosc4==0){
             document.getElementById("pole4").style.backgroundColor = "red";
         }
     }
     
     
+    function aktualizacja(wartosc, pole){
 
-    function aktualizacja(wartosc,pole){
-        wartosc = prompt("Podaj nową ilość:")  
-        document.getElementById(pole).innerHTML=wartosc;
+        
+        wartosc = prompt("Podaj aktualną ilość:");
+        
+        pole.innerHTML = wartosc;
+        if(wartosc<5 && wartosc>0){
+            pole.style.backgroundColor = "yellow";
+        }
+        else if(wartosc==0){
+            pole.style.backgroundColor = "red";
+        }
+        else{
+            pole.style.backgroundColor = "white";
+        }
         braki();
     }
-    function zamamow(){
-        
+    
+          
+    function zamamow(wartosc, pole)
+    {
+        pole.innerHTML = wartosc +1 ;
+        if(pole == pole1 ){
+            // nie wiem czy ma być wartość  przed dodaniem czy po 
+            alert("Zamówienie nr:" +  wartosc   +    " Produkt: Skrętka U/UTP drut" );
+            wartosc1++;
+        }
+        if(pole == pole2 ){
+            alert("Zamówienie nr:" +  wartosc  +    " Produkt: Skrętka U/UTP linka " );
+            wartosc2++;
+        }
+        if(pole == pole3 ){
+            alert("Zamówienie nr:" +  wartosc  +    " Produkt: Wtyki 8P8C " );
+            wartosc3++;
+        }
+        if(pole == pole4 ){
+            alert("Zamówienie nr:" +  wartosc  +    " Produkt:Moduły Keystone " );
+            wartosc4++;
+        }
+      
     }
     </script>
 </body>
