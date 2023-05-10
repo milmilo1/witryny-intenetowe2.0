@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <div id="baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+    <div id="lewy">
+      <h2>Aktualizacja i zamówienia materiałów</h2>  <br>
+      <p>Do wewnętrznego użytku firmy</p>
+      <img src="obraz.png" alt="„Do wewnętrznego użytku firmy">
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <td><b>Produk</b> </td> 
+                <td><b>Jednostka</b> </td> 
+                <td><b>Dostępna ilość</b> </td>  
+                <td><b>Aktualizacja</b> </td>  
+                <td><b>Zamówienie</b> </td>   
+            </tr>
+            <tr>
+                <td><b>Skrętka U/UTP drut</b> </td> 
+                <td>metr</td> 
+                <td><p id="pole1">30</p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(pole1)"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow(pole1)"></td>   
+            </tr>
+            <tr>
+                <td><b>Skrętka U/UTP linka</b> </td> 
+                <td>metr</td> 
+                <td><p id="pole2">2</p> </td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(pole2)"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow(pole2)"></td>   
+            </tr>
+            <tr>
+                <td><b>Wtyki 8P8C</b> </td> 
+                <td>sztuki</td> 
+                <td><p id="pole3">10</p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(pole3)"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow(pole3)"></td>   
+            </tr>
+            <tr>
+                <td><b>Moduły Keystone</b> </td> 
+                <td>sztuki</td> 
+                <td> <p id="pole4">30</p></td>  
+                <td> <input type="button" value="Aktualizuj" onclick="aktualizacja(pole4)"></td>  
+                <td> <input type="button" value="Zamów" onclick="zamamow(pole4)"></td>   
+            </tr>
+            
+        </table>
+    </div>
+   
+    <div id="stopka">
+        <a href="http://sieci.pl/">Nasza strona internetowa</a><br>
+        <p>Strone przygotował:674579646548</p>
+    </div>
+    <script >
+        x=0;
+
+  
+     
+    braki(pole1);
+   braki(pole2 );
+   braki(pole3 );
+   braki(pole4 );
+       
+   function braki(pole )
+   {
+        if(pole.innerHTML<5 && pole.innerHTML>0){
+            pole.style.backgroundColor = "yellow";
+        }
+        else if(pole.innerHTML==0){
+            pole.style.backgroundColor = "red";
+        }
+        else{
+            pole.style.backgroundColor = "white";
+        }
+
+
+   }
+  
+
+    
+    
+    
+    function aktualizacja( pole){
+
+        
+        wartosc = prompt("Podaj aktualną ilość:");
+        
+        pole.innerHTML = wartosc;
+        if(pole.innerHTML<5 && pole.innerHTML>0){
+            pole.style.backgroundColor = "yellow";
+        }
+        else if(pole.innerHTML==0){
+            pole.style.backgroundColor = "red";
+        }
+        else{
+            pole.style.backgroundColor = "white";
+        }
+        braki();
+    }
+    
+          
+    function zamamow( pole)
+    {
+        x++;
+        if(pole == pole1 ){
+            alert("Zamówienie nr:" +  x   +    " Produkt: Skrętka U/UTP drut" );
+            
+            braki();
+         
+        }
+        if(pole == pole2 ){
+            alert("Zamówienie nr:" + x +    " Produkt: Skrętka U/UTP linka " );
+            braki();
+          
+        }
+        if(pole == pole3 ){
+            alert("Zamówienie nr:" +  x  +    " Produkt: Wtyki 8P8C " );
+            braki();
+         
+        }
+        if(pole == pole4 ){
+            alert("Zamówienie nr:" +  x  +    " Produkt:Moduły Keystone " );
+            braki();
+          
+        }
+       
+
+    }
+    </script>
+</body>
+</html>

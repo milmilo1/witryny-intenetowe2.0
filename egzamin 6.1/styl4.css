@@ -1,0 +1,56 @@
+*{
+    font-family: verdana;
+    text-align: center;
+    
+}
+
+#baner{
+    background-color:DarkGreen ;
+    color: white;
+    padding: 5px;
+}
+#lewy{
+    float: left;
+    background-color:palegreen ;
+  width: 30%;
+  height: 500px;
+}
+#prway{
+    float: left;
+    background-color:Honeydew ;
+  width: 70%;
+  height: 500px;
+  padding-top: 100px;
+}
+#stopka{
+  
+    clear: both;
+    background-color:palegreen ;
+    padding: 3px;
+}
+table, td{
+  border: 1PX solid darkgreen;
+  border-collapse: collapse;
+}
+table{
+  width: 50%;
+  margin: auto;
+  
+}
+td,tr{
+  padding:  20px, 0px;
+}
+
+
+input[type=button]
+{
+    background-color: darkgreen ;
+    color: white;
+    padding: 5px;
+}
+input[type=button]:hover
+{
+    background-color: Honeydew ;
+    color: darkgreen;
+    padding: 5px;
+}
