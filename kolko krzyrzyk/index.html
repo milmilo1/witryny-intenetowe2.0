@@ -20,28 +20,72 @@
             <td id="siedem" onclick="funkcja('siedem')"></td>        <td id="osiem" onclick="funkcja('osiem')"></td>                 <td id="dziewienc" onclick="funkcja('dziewienc')"></td>
          </tr>
     </table>
+    <p id="wynik"></p>
     <script>
         let OX=0
         function funkcja(liczba)
         {
-           
-            console.log(        )
-            if(document.getElementById(liczba).innerHTML.length==0)
+            if(document.getElementById(liczba).innerHTML.length == 0)
             {
-                if(OX%2==0){
-                    document.getElementById(liczba).innerHTML="X"
+                if(OX % 2 == 0){
+                    document.getElementById(liczba).innerHTML = "X";
                 }
-                else
-                {
-                    document.getElementById(liczba).innerHTML="O"
-                    
+                else {
+                    document.getElementById(liczba).innerHTML = "O";
                 }
-
-
-                OX++
+                OX++;
+                
+                if(sprawdzWygrana()) {
+                  return;
+                }
             }
-
         }
+        function sprawdzWygrana() {
+            // tablica z aktualnym stanem planszy
+            let plansza = [    [document.getElementById("jeden").innerHTML, document.getElementById("dwa").innerHTML, document.getElementById("trzy").innerHTML],
+              [document.getElementById("cztery").innerHTML, document.getElementById("pienc").innerHTML, document.getElementById("szesc").innerHTML],
+              [document.getElementById("siedem").innerHTML, document.getElementById("osiem").innerHTML, document.getElementById("dziewienc").innerHTML]
+            ];
+            
+            // sprawdzanie wygranej w poziomie
+            for(let i = 0; i < 3; i++) {
+              if(plansza[i][0] == plansza[i][1] && plansza[i][1] == plansza[i][2] && plansza[i][0] != "") {
+                document.getElementById("wynik").innerHTML = plansza[i][0] + " wygrał!";
+                return true;
+              }
+            }
+            
+            // sprawdzanie wygranej w pionie
+            for(let j = 0; j < 3; j++) {
+              if(plansza[0][j] == plansza[1][j] && plansza[1][j] == plansza[2][j] && plansza[0][j] != "") {
+                document.getElementById("wynik").innerHTML = plansza[0][j] + " wygrał!";
+                return true;
+              }
+            }
+            
+            // sprawdzanie wygranej na skos
+            if((plansza[0][0] == plansza[1][1] && plansza[1][1] == plansza[2][2] && plansza[0][0] != "") || (plansza[0][2] == plansza[1][1] && plansza[1][1] == plansza[2][0] && plansza[0][2] != "")) {
+              document.getElementById("wynik").innerHTML = plansza[1][1] + " wygrał!";
+              return true;
+            }
+            
+            // sprawdzanie remisu
+            let iloscZajetychPol = 0;
+            for(let i = 0; i < 3; i++) {
+              for(let j = 0; j < 3; j++) {
+                if(plansza[i][j] != "") {
+                  iloscZajetychPol++;
+                }
+              }
+            }
+            if(iloscZajetychPol == 9) {
+              document.getElementById("wynik").innerHTML = "Remis!";
+              return true;
+            }
+            
+            return false;
+          }
+          
     </script>
 </body>
 </html>
