@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memory game </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="one" onclick="">1</td>
+            <td id="two">2 </td>
+            <td id="Three">3</td>
+            <td id="four">4</td>
+        </tr>
+        <tr>
+          <td id="five">5</td>
+          <td id="six">6 </td>
+          <td id="seven">7</td>
+          <td id="eight">8</td>
+        </tr>
+        <tr>
+            <td id="nine">9</td>
+            <td id="ten">10 </td>
+            <td id="eleven">11</td>
+            <td id="twelve">12</td>
+        </tr>
+      </table>
+      <script>
+         
+        function SetGame(){
+           UsedFields=[
+                //[numer , czy już coś jest przypisane   ]
+            [1,false,''],
+            [2,false,''],
+            [3,false,''],
+            [4,false,''],
+            [5,false,''],
+            [6,false,''],
+            [7,false,''],
+            [8,false,''],
+            [9,false,''],
+            [10,false,''],  
+            [11,false,''],         
+            [12,false,''],
+            ];
+            
+            //przypadkowe 2 liczby które nie są zajęte  do nich są przypisane są litery najpierw a potem b...
+            letters="ABCDEF"
+            for(var i=0; i<6; i++){
+                var a = getRandomArbitrary(1,12)
+                var b = getRandomArbitrary(1,12)
+                    if(UsedFields[a-1,2]==true && UsedFields[a-1,2]==true)
+                    {
+                        i--
+                    }
+                    else{
+                        UsedFields[a-1]=UsedFields[a-1,true,letters[i]]
+                    }
+                    
+            }
+            
+            whichFields = getRandomArbitrary(1,12);
+            
+            
+        }
+     
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - 1) + min;
+        }
+        
+      </script>
+</body>
+</html>
